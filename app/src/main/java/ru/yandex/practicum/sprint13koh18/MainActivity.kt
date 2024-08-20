@@ -192,6 +192,7 @@ class MainActivity : AppCompatActivity() {
                     binding.cartContainer.visibility = View.VISIBLE
                 }
             }
+            binding.toolbar.setTitle(newScreenMode.titleResId)
             currentScreenMode = newScreenMode
         }
     }
