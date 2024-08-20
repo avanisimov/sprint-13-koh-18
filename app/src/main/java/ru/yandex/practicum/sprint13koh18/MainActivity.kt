@@ -190,6 +190,13 @@ class MainActivity : AppCompatActivity() {
                 ScreenMode.CART -> {
                     binding.catalogContainer.visibility = View.GONE
                     binding.cartContainer.visibility = View.VISIBLE
+                    if (cartItemsAdapter.itemCount > 0)
+                    {
+                        binding.cartEmptyTitle.visibility = View.GONE
+                    }
+                    else {
+                        binding.cartEmptyTitle.visibility = View.VISIBLE
+                    }
                 }
             }
             binding.toolbar.setTitle(newScreenMode.titleResId)
